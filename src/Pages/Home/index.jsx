@@ -1,3 +1,4 @@
 import Home from '../../components/Home'
+ const HomePages = () => <Home/>
 
-export const HomePages = () => Home
+export default HomePages 
