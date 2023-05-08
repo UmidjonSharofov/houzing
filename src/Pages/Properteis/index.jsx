@@ -1,3 +1,5 @@
 import Properties from '../../components/Properties'
 
-export const PropertiesPages = () => Properties
+const PropertiesPages = () => <Properties/>
+
+export default PropertiesPages 
