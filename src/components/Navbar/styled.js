@@ -14,7 +14,7 @@ const Main = styled.div`
 `;
 const Wrapper = styled.div`
  max-width: 1440px;
-  width: 100%;
+  width: 100% ;
   display: flex;
   align-items: center;
   justify-content: space-between;

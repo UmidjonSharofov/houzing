@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Link, Logo, Main, Section, Wrapper } from './styled'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { navbar } from '../../utils/navbar'
+import { Button } from '../generic'
 
 
 export const Navbar = () => {
@@ -17,12 +18,12 @@ export const Navbar = () => {
           </Section>
           <Section>
             {
-              navbar.map(({ title, path, id }, index) => {
-                return <Link className={({ isActive }) => isActive && 'active'} key={index} to={path}>{title}</Link>
+              navbar.map(({hidden, title, path, id }, index) => {
+               return !hidden && <Link className={({ isActive }) => isActive && 'active'} key={index} to={path}>{title}</Link>
               })
             }
           </Section>
-          <Section><button>bos</button></Section>
+          <Section><Button onClick={()=>navget('/signin')} wd={120} type={'dark'}>Login</Button></Section>
         </Wrapper>
       </Main>
       <Outlet />
