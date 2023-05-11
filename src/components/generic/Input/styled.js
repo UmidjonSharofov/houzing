@@ -36,14 +36,26 @@ const Container = styled.input`
   border-radius: 2px;
   min-width: 120px;
 
+  padding-left: ${({ icon }) => (icon ? "35px" : "20px")};
   font-size: ${({ FS }) => (FS ? `${FS}px` : "14px")};
   height: ${({ hd }) => (hd ? `${hd}px` : "44px")};
   width: ${({ wd }) => (wd ? `${wd}px` : "100%")};
-  border:1px solid  #E6E9EC;
+  border: 1px solid #e6e9ec;
 
-  outline:none;
+  outline: none;
 
   /* ${getType} */
 `;
+const Wrapper = styled.div`
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: ${({ wd }) => (wd ? `${wd}px` : "100%")};
+`;
+const Icon = styled.div`
+  position: absolute;
+  left: 10px;
+`;
 
-export { Container };
+
+export { Container, Wrapper, Icon};

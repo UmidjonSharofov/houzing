@@ -3,6 +3,7 @@ import { Container, Link, Logo, Main, Section, Wrapper } from './styled'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { navbar } from '../../utils/navbar'
 import { Button } from '../generic'
+import Filter from '../Filter'
 
 
 export const Navbar = () => {
@@ -26,6 +27,7 @@ export const Navbar = () => {
           <Section><Button onClick={()=>navget('/signin')} wd={120} type={'dark'}>Login</Button></Section>
         </Wrapper>
       </Main>
+      <Filter/>
       <Outlet />
     </Container>
   )

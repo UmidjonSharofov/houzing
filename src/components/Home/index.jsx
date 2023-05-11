@@ -7,7 +7,6 @@ export const Home = () => {
   return (
     <>
       <Container>Home</Container>
-      <Input wd={200} placeholder={'TITL'} />
     </>
   )
 }
