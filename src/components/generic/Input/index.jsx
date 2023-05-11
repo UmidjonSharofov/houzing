@@ -1,19 +1,24 @@
-import React from 'react'
-import { Container } from './styled'
+import React, { forwardRef } from 'react'
+import { Container, Icon, Wrapper } from './styled'
 
-export const Input = ({ children, FS ,wd, hd, type, onChange, placeholder, name ,value,defaultValue}) => {
+const Input = forwardRef(({ icon, FS, wd, hd, type, onChange, placeholder, name, value, defaultValue }, ref) => {
   return (
-    <Container onChange={onChange}
-      placeholder={placeholder}
-      name={name}
-      wd={wd}
-      hd={hd}
-      type={type}
-      value={value}
-      defaultValue={defaultValue}
-      FS={FS}
-       />
+    <Wrapper>
+      <Icon>{icon}</Icon>
+      <Container
+        ref={ref}
+        onChange={onChange}
+        placeholder={placeholder}
+        name={name}
+        wd={wd}
+        hd={hd}
+        type={type}
+        value={value}
+        defaultValue={defaultValue}
+        FS={FS}
+        icon={icon}
+      />
+    </Wrapper>
   )
-}
-
+})
 export default Input
