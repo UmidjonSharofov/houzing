@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container } from './styled'
 import GenCarousel from '../Carousel'
+import HouseCart from '../House-cart'
 
 
 export const Home = () => {
@@ -8,6 +9,7 @@ export const Home = () => {
     <>
       <Container>
         <GenCarousel/>
+        <HouseCart/>
       </Container>
     </>
   )

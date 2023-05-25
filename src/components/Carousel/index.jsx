@@ -1,7 +1,6 @@
 import React ,{useRef} from 'react'
 import { Arrow, Blur, Container, Content, Img } from './stayled'
 import { Carousel } from 'antd';
-import{Button} from '../generic'
 import houzing from '../../assets/img/houzing.png'
 import houzing1 from '../../assets/img/houzing1.png'
 import houzing2 from '../../assets/img/houzing2.png'
