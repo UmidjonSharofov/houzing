@@ -2,6 +2,7 @@ import { NavLink, Outlet, useNavigate } from "react-router-dom"
 import logo from '../../assets/icon/logo.svg'
 import { navbar } from "../../utils/navbar"
 import Button from "../Generic/Button"
+import Filter from "../Filter"
 
 const Navbar = () => {
   const navigate = useNavigate()
@@ -24,6 +25,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      <Filter />
       <Outlet />
     </>
   )
