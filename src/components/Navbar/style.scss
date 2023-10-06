@@ -1,0 +1,39 @@
+.Container_Navbar {
+  width: 100%;
+  background: $colorPirmary;
+  color: $colorWhite;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  max-width: 1400px;
+
+}
+.Wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 130px;
+    
+}
+.Section_Navbar{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    img{
+        width: 30px;
+         margin-right: 12px;
+    }
+    a{
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $colorWhite;
+        padding: 0 32px ;
+        
+    }
+  .active{
+    color: #b8ff06;
+  }
+}
