@@ -11,7 +11,7 @@ const getType = ({ type }) => {
       return {
         background: "#fff",
         border: "1px solid #E6E9EC",
-        color: "#fff",
+        color: "#0D263B",
       };
     case "cklic":
       return {
@@ -45,14 +45,14 @@ const Container = styled.button`
   font-weight: 400;
   background-color: #2567c5;
   border: none;
-
+  width: 100%;
   font-size: ${({ FS }) => (FS ? `${FS}px` : "14px")};
   height: ${({ hd }) => (hd ? `${hd}px` : "44px")};
-  width: ${({ wd }) => (wd ? `${wd}px` : "100%")};
+  width: ${({ wd }) => (wd ? `${wd}px` : "150px")};
   border-radius: ${({ br }) => (br ? `${br}px` : "2px")};
   cursor: pointer;
 
-  :active {
+  &:active {
     opacity: 0.7;
   }
   ${getType}

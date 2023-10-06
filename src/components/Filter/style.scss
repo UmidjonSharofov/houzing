@@ -1,0 +1,35 @@
+.Filter {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  img {
+    margin-right: 8px;
+  }
+
+  .Input_filter {
+    width: 100%;
+    position: relative;
+    .houses {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+    }
+  }
+  .Filter_Button {
+    padding-left: 50px;
+  }
+}
+.menuWrapper {
+  background: $colorWhite;
+  padding: 30px;
+  border: 1px solid #e6e9ec;
+}
+.menu_Section{
+    width: 100%;
+    display: flex;
+    align-items: center;  
+    margin-bottom: 20px;
+    gap: 20px;
+}
+

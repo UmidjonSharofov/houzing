@@ -1,14 +1,14 @@
 .Container_Navbar {
   width: 100%;
   background: $colorPirmary;
-  
   height: 64px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .Wrapper {
-  max-width: 1400px;
   width: 100%;
+  max-width: 1400px;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -1,6 +1,17 @@
-@import 'variables';
-@import '../components/Navbar/style.scss';
-@import '../components/Home/style.scss';
-
-
-
+@import "variables";
+@import "../components/Navbar/style.scss";
+@import "../components/Home/style.scss";
+@import "../components/Filter/style.scss";
+.Container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sub_Title {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}

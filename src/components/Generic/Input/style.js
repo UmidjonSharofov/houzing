@@ -11,7 +11,6 @@ const getType = ({ type }) => {
       return {
         background: "#fff",
         border: "1px solid #E6E9EC",
-        color: "#fff",
       };
     case "cklic":
       return {
@@ -47,7 +46,7 @@ const Container = styled.input`
   height: ${({ hd }) => (hd ? `${hd}px` : "44px")};
   width: ${({ wd }) => (wd ? `${wd}px` : "100%")};
   border-radius: ${({ br }) => (br ? `${br}px` : "2px")};
-  outline:none;
+  padding-left: ${({ icon }) => (icon ? `50px` : "20px")};
 
   :active {
     opacity: 0.7;
