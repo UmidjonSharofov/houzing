@@ -1,9 +1,10 @@
+import Carousel from "../Carousel"
 
 
- const Home = () => {
+const Home = () => {
   return (
     <div>
-   
+      <Carousel />
     </div>
   )
 }
