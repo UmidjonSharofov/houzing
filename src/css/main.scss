@@ -3,6 +3,7 @@
 @import "../components/Home/style.scss";
 @import "../components/Filter/style.scss";
 @import "../components/Carousel/style.scss";
+@import "../components/houses-cart/style.scss";
 .Container {
   width: 100%;
   display: flex;
@@ -10,9 +11,17 @@
   justify-content: center;
 }
 .sub_Title {
-    font-family: Montserrat;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  color: $colorPirmary;
+}
+.info {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  color: $colorSecoundary;
 }
