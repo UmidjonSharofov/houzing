@@ -46,7 +46,8 @@ const Container = styled.input`
   height: ${({ hd }) => (hd ? `${hd}px` : "44px")};
   width: ${({ wd }) => (wd ? `${wd}px` : "100%")};
   border-radius: ${({ br }) => (br ? `${br}px` : "2px")};
-  padding-left: ${({ icon }) => (icon ? `50px` : "20px")};
+  padding-left:  ${({ icon }) => (icon ? `50px` : "10px")};
+  outline:none;
 
   :active {
     opacity: 0.7;

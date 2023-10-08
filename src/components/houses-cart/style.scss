@@ -1,11 +1,16 @@
 .Houses_Cart {
-  width: 380px;
-  height: 429px;
-  border-radius: 3px;
-  background: $colorWhite;
-  border-radius: 3px;
-  border: 1px solid  #e6e9ec;
-
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  .Houses_Cart_Wrapper {
+    width: 100%;
+    border-radius: 3px;
+    background: $colorWhite;
+    border-radius: 3px;
+    border: 1px solid #e6e9ec;
+    box-shadow: 0px 0px 5px 5px rgba(138, 134, 134, 0.2);
+  }
   .Houses_img {
     width: 100%;
     height: 220px;
@@ -16,10 +21,8 @@
   }
 }
 .Houses_wrapper {
-  width: 100%;
   padding: 24px 20px;
   .Houses_title {
-    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -42,9 +45,10 @@
   width: 100%;
   background: #e6e9ec;
   height: 1px;
+  margin-bottom: 8px;
 }
 .Houses_footer {
-  padding: 8px 20px;
+  padding: 20px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
