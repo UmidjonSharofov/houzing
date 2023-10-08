@@ -4,12 +4,23 @@
 @import "../components/Filter/style.scss";
 @import "../components/Carousel/style.scss";
 @import "../components/houses-cart/style.scss";
+@import "../components/Properties/style.scss";
+
 .Container {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.Wrapper {
+  max-width: 1400px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 130px;
+}
+
 .sub_Title {
   font-family: Montserrat;
   font-size: 16px;
@@ -24,4 +35,11 @@
   font-style: normal;
   font-weight: 400;
   color: $colorSecoundary;
+}
+
+.inline {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
