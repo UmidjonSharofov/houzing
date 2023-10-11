@@ -36,7 +36,7 @@ const Filter = () => {
         <div className="menu_Section">
           <Input defaultValue={query.get('country')} onChange={onChange} name='country' ref={Country}  placeholder={'Country'} />
           <Input defaultValue={query.get('region')} onChange={onChange} name='region' ref={Region} placeholder={'Region'} />
-          <Input defaultValue={query.get('city')} onChange={onChange} name='city' ref={City}  placeholder={'City'} />
+          <Input defaultValue={query.get('address')} onChange={onChange} name='address' ref={City}  placeholder={'City'} />
           <Input defaultValue={query.get('zip_code')} onChange={onChange} name='zip_code' ref={Zipcode}  placeholder={'Zip code'} />
         </div>
         <h3 className="sub_Title">Apartment info</h3>

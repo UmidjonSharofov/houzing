@@ -38,7 +38,7 @@ const Carousel = () => {
                             <h1>{`Skyper Pool Partment`}</h1>
                             <Button >Read more</Button>
                         </div>
-                        <div className='Carousle_blur'>
+                        <div className='blur'>
                         </div>
                         <img src={Img1} alt="carousel" />
                     </SwiperSlide>
@@ -46,8 +46,7 @@ const Carousel = () => {
                         <div className='Carousle_title'>
                             <h1>{`Vermont Farmhouse With Antique Jail I the Week's Most Popular Home`}</h1>
                         </div>
-                        <div className='Carousle_blur'>
-                        </div>
+                        <div className='blur'/>
                         <img src={Img2} alt="carousel" />
                     </SwiperSlide>
 

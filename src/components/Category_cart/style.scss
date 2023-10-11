@@ -1,0 +1,41 @@
+.CategoryCart {
+  width: 100%;
+  width: 280px;
+  min-width: 250px;
+  border-radius: 3px;
+
+  .category_img {
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    img {
+      height: 350px;
+      border-radius: 3px;
+      width: 100%;
+    }
+    .blur {
+      border-radius: 3px;
+    }
+  }
+  .category_title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    p {
+      color: $colorWhite;
+      font-family: Montserrat;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 28px; /* 155.556% */
+    }
+  }
+}

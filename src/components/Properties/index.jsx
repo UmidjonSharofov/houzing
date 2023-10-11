@@ -1,7 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import HoseCart from '../houses-cart'
-import { useLocale } from "antd/es/locale"
 import { useLocation } from "react-router-dom"
 
 const Properties = () => {
@@ -12,9 +11,12 @@ const Properties = () => {
   useEffect(() => {
     axios.get(`${url}houses/list${search}`).then((res) => {
       setData(res?.data?.data)
+    }).then((res)=>{
+      console.log(res);
+    }).catch((err)=>{
+      console.log(err);
     })
   }, [search])
-console.log(data,"a");
   return (
     <div className="Container">
       <div className="Wrapper">
