@@ -26,7 +26,7 @@ export const Category = () => {
             setData(res?.data?.data)
         })
     }, [url,data])
-    console.log(data);
+    // console.log(data);
 
     return (
         <div className="Category">
@@ -44,7 +44,7 @@ export const Category = () => {
                 >
                     {data.map(v => (
                         <SwiperSlide className="Category_flex" key={v.id}>
-                            <CategoryCart onClick={() => navigate(`/properties?categories=${v.name}`)} data={v} key={v.id} />
+                            <CategoryCart onClick={() => navigate(`/properties?categories_id=${v.id}`)} data={v} key={v.id} />
                         </SwiperSlide>
                     ))}
                 </Swiper>

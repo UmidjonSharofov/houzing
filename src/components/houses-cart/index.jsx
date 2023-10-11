@@ -9,7 +9,6 @@ import noImg from '../../assets/images/no_image.jpg'
 
 // eslint-disable-next-line react/prop-types
 const HousesCart = ({ data }) => {
-    console.log(data);
     return (
             <div className='Houses_Cart'>
                 {
@@ -22,7 +21,7 @@ const HousesCart = ({ data }) => {
                             <div className='Houses_wrapper'>
                                 <div className='Houses_title'>
                                     <h2 className='sub_Title inline' >{v.city||'city'},{v.country||""},{v.description||""}</h2>
-                                    <h4 className='info'>{v.address || 'Quincy St, Brooklyn, NY, USA'} - {v.category?.name||"category"}</h4>
+                                    <h4 className='info inline' >{v.address || 'Quincy St, Brooklyn, NY, USA'} - {v.category?.name||"category"} {v.houseDetails.room ||0}-rooms</h4>
                                 </div>
                             </div>
                             <div className='Detials'>

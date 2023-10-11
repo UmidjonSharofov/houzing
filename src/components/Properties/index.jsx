@@ -11,10 +11,6 @@ const Properties = () => {
   useEffect(() => {
     axios.get(`${url}houses/list${search}`).then((res) => {
       setData(res?.data?.data)
-    }).then((res)=>{
-      console.log(res);
-    }).catch((err)=>{
-      console.log(err);
     })
   }, [search])
   return (

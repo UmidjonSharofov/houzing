@@ -5,6 +5,7 @@
   padding: 10px 0;
   img {
     margin-right: 8px;
+
   }
 
   .Input_filter {
@@ -34,4 +35,16 @@
     gap: 20px;
   
 }
+// style={{width:200,height:45,}} 
+.menu_Select{
+  width:200px;
+  height: 45px;
+}
 
+.menuWrapper{
+
+  :where(.css-dev-only-do-not-override-pr0fja).ant-select-single .ant-select-selector{
+    border-radius: 2px !important;
+    
+  }
+}
