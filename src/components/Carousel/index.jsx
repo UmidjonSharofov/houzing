@@ -32,6 +32,13 @@ const Carousel = () => {
                     className='Swper'
 
                 >
+                    <SwiperSlide>
+                        <div className='Carousle_title'>
+                            <h1 className='subChild'>{`Vermont Farmhouse With Antique Jail I the Week's Most Popular Home`}</h1>
+                        </div>
+                        <div className='blur' />
+                        <img src={Img2} alt="carousel" />
+                    </SwiperSlide>
 
                     <SwiperSlide>
                         <div className='Carousle_title'>
@@ -42,14 +49,6 @@ const Carousel = () => {
                         </div>
                         <img src={Img1} alt="carousel" />
                     </SwiperSlide>
-                    <SwiperSlide>
-                        <div className='Carousle_title'>
-                            <h1>{`Vermont Farmhouse With Antique Jail I the Week's Most Popular Home`}</h1>
-                        </div>
-                        <div className='blur'/>
-                        <img src={Img2} alt="carousel" />
-                    </SwiperSlide>
-
                 </Swiper>
 
             </div>

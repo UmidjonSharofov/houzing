@@ -25,18 +25,22 @@ const Filter = () => {
       setData(res?.data?.data)
 
     })
-  }, [url])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const navigate = useNavigate()
   const location = useLocation()
   const query = useSearch()
 
   useEffect(() => {
-    const [d] = data.filter((v) => v.id === Number(query.get('category_id')))
+    let [d] = data.filter((v) => v.id === Number(query.get('category_id')))
     d?.name && setValue(d?.name)
     !query.get('category_id') && setValue('Select Category')
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.search, data])
+  console.log(query.get('category_id'));
+  // console.log(location.search);
+  
 
   const Country = useRef()
   const Region = useRef()
@@ -53,13 +57,12 @@ const Filter = () => {
   const onChange = ({ target: { value, name } }) => {
     navigate(`${location?.pathname}${uzeReplace(name, value)}`)
   }
-
   const onChangeCategory = (category_id) => {
-    navigate(`/properties/${uzeReplace('category_id', category_id)}`)
+    navigate(`/properties${uzeReplace('category_id', category_id)}`)
   }
 
   const onChangeSort = (sort) => {
-    navigate(`/properties/${uzeReplace('sort', sort)}`)
+    navigate(`/properties${uzeReplace('sort', sort)}`)
   }
   const menu = () => {
     return (
@@ -82,7 +85,7 @@ const Filter = () => {
           </Select>
           {/* <Input ref={Sort}  placeholder={'Sort'} /> */}
           <Select className="menu_Select" value={value} onChange={onChangeCategory}>
-            <option value={''}>Select category</option>
+            <option value={''} name="menu_Select">Select category</option>
             {
               data?.map(v => (
                 <option value={v.id} key={v.id} >{v.name}</option>

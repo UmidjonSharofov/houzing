@@ -17,7 +17,11 @@ const Properties = () => {
     <div className="Container">
       <div className="Wrapper">
         <div className="Properties">
-          <HoseCart data={data}/>
+          {
+            data.map(v=>(
+              <HoseCart data={v} key={v.id}/>
+            ))
+          }
         </div>
       </div>
     </div>
