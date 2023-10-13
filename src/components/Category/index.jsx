@@ -30,10 +30,14 @@ export const Category = () => {
 
     return (
         <div className="Category">
+            <div className="Recommended_title">
+               <h3 className="title">Category</h3>
+               <p className="sub_Title">Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.</p>
+            </div>
             {data.length>0&&
                  <Swiper
                     modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
-                    spaceBetween={130}
+                    spaceBetween={4}
                     slidesPerView={4}
                     navigation
                     pagination={{ clickable: true }}
@@ -44,7 +48,7 @@ export const Category = () => {
                 >
                     {data.map(v => (
                         <SwiperSlide className="Category_flex" key={v.id}>
-                            <CategoryCart onClick={() => navigate(`/properties?categories_id=${v.id}`)} data={v} key={v.id} />
+                            <CategoryCart onClick={() => navigate(`/properties?category_id=${v.id}`)} data={v} key={v.id} />
                         </SwiperSlide>
                     ))}
                 </Swiper>

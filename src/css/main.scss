@@ -7,6 +7,10 @@
 @import "../components/Properties/style.scss";
 @import "../components/Category_cart/style.scss";
 @import "../components/Category/style.scss";
+@import "../components/Recommended/style.scss";
+@import "../components/why/style.scss";
+@import "../components/Banner/style.scss";
+// @import "../components/Testimonials/style.scss";
 
 .Container {
   width: 100%;
@@ -23,9 +27,30 @@
   align-items: center;
   padding: 0 130px;
 }
-
-.sub_Title {
+.subChild {
+  color: $colorWhite;
+  text-align: center;
+  /* Heading/H4/Semibold/Desktop */
   font-family: Montserrat;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px; /* 128.571% */
+  letter-spacing: -0.56px;
+}
+.title {
+  color: $colorPirmary;
+  text-align: center;
+  /* Heading/H4/Semibold/Desktop */
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px; /* 128.571% */
+  letter-spacing: -0.56px;
+}
+.sub_Title {
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -33,7 +58,7 @@
   color: $colorPirmary;
 }
 .info {
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -46,11 +71,11 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.blur{
+.blur {
   position: absolute;
   z-index: 989;
   height: 99.4%;
-  top:0;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
