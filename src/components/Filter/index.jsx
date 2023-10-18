@@ -38,7 +38,6 @@ const Filter = () => {
     !query.get('category_id') && setValue('Select Category')
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.search, data])
-  console.log(query.get('category_id'));
   // console.log(location.search);
 
 

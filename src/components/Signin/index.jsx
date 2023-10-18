@@ -52,7 +52,7 @@ export const SignIn = () => {
           <Button onClick={Login}>Login</Button>
           <ToastContainer />
         </div>
-        <div><Link to={'/singup'}>Don't have an account? Sign up</Link></div>
+        <div className="singinlink"><Link to={'/singup'}>Don't have an account? Sign up</Link></div>
       </div>
     </div>
   )
