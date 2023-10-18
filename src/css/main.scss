@@ -11,6 +11,8 @@
 @import "../components/why/style.scss";
 @import "../components/Banner/style.scss";
 @import "../components/Footer/style.scss";
+@import "../components/Recent/index.scss";
+@import "../components/Signin/style.scss";
 // @import "../components/Testimonials/style.scss";
 
 .Container {
@@ -81,4 +83,18 @@
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
+}
+.sing_Title{
+  color: $colorPirmary;
+  font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 28px; /* 155.556% */
+}
+
+@media (max-width: 375px) {
+  .info{
+    font-size: 12px !important;
+  }
 }

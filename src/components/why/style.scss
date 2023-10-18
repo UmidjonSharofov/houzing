@@ -1,3 +1,4 @@
+
 .Why {
   width: 100%;
   display: flex;
@@ -15,6 +16,7 @@
     gap: 8px;
   }
   .why_container {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -53,3 +55,43 @@
     }
   }
 }
+@media (max-width: 600px) {
+  .Why{
+    background: transparent;
+    width: 93%;
+    height: 60%;
+   
+  }
+  .Why_title{
+    padding:0 ;
+  }
+  .why_container{
+    width: 100% ;
+    padding:  65px ;
+    flex-direction: column;
+    
+  }
+ }
+ @media (max-width: 480px) {
+  .Why{
+    background: transparent;
+    width: 91%;
+   
+  }
+  .Why_title {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding: 0px 10px !important;
+    h3 {
+      font-size: 22px;
+    }
+    p {
+      font-size: 13px;
+      padding-bottom: 120px;
+    }
+  }
+ }
+@media (max-width: 375px) {
+ 
+ }

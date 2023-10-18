@@ -1,0 +1,32 @@
+.signin{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    background:#E6E9EC;
+    .signin_content{
+        background: #fff;
+        width: 100%;
+        border: 1px solid #E6E9EC;
+        max-width: 580px;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        gap: 30px;
+        margin: 64px;
+        .signin_Input{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+       
+    }
+    .signin_Button {
+        width: 100%;
+        button{
+            width: 100%;
+        }
+    }
+}

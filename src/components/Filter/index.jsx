@@ -25,7 +25,7 @@ const Filter = () => {
       setData(res?.data?.data)
 
     })
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const navigate = useNavigate()
@@ -36,11 +36,11 @@ const Filter = () => {
     let [d] = data.filter((v) => v.id === Number(query.get('category_id')))
     d?.name && setValue(d?.name)
     !query.get('category_id') && setValue('Select Category')
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.search, data])
   console.log(query.get('category_id'));
   // console.log(location.search);
-  
+
 
   const Country = useRef()
   const Region = useRef()
@@ -109,19 +109,19 @@ const Filter = () => {
             <img className="houses" src={houses} alt="houses" />
             <Input icon={houses} placeholder={'Enter an address, neighborhood, city, or ZIP code'} />
           </div>
-          <div className="Filter_Button">
-            <Dropdown overlay={menu} placement="bottomRight" trigger={['click']} arrow>
-              <div onClick={(e) => e.preventDefault()}>
-                <Button type={'ligth'}> <img src={filter} alt="filter" /> Advanced</Button>
-              </div>
-            </Dropdown>
-          </div>
-          <div className="Filter_button">
+          <div className="Friler_button">
+            <div className="Filter_Button">
+              <Dropdown overlay={menu} placement="bottomRight" trigger={['click']} arrow>
+                <div onClick={(e) => e.preventDefault()}>
+                  <Button type={'ligth'}> <img src={filter} alt="filter" /> Advanced</Button>
+                </div>
+              </Dropdown>
+            </div>
+            <div className="Filter_button">
+              <Button>
+                <img src={serach} alt="serch" /> Search</Button>
 
-            <Button>
-              <img src={serach} alt="serch" />
-              Search</Button>
-
+            </div>
           </div>
         </div>
       </div>

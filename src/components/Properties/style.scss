@@ -6,3 +6,22 @@
   gap: 20px;
 
 }
+.Properties_wrapper{
+  width: 100%;
+
+  .Properties_title{
+    padding: 70px 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .Properties{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+  }
+}
