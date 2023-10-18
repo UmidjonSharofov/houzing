@@ -29,7 +29,7 @@ export const Recernt = () => {
 
     return (
         <div className="Recommended">
-            <div className="Recommended_title">
+            <div className="Recernt_title">
                <h3 className="title">Recent Properties for Rent</h3>
                <p className="sub_Title">Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.</p>
             </div>
@@ -58,6 +58,15 @@ export const Recernt = () => {
 
                 </Swiper>
             }
+              <div className="Recommended_media">
+                <div className="gap">
+                    {
+                        data?.map((v) => (
+                            <HousesCart key={v.id} data={v} />
+                        ))
+                    }
+                </div>
+            </div>
         </div>
     )
 }

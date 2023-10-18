@@ -40,7 +40,6 @@ const Container = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 100px;
   color: #fff;
   font-weight: 400;
   background-color: #2567c5;

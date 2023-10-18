@@ -1,11 +1,15 @@
 .Banner {
   width: 100%;
   position: relative;
-  padding:  96px 0px 0 0 ;
+  padding: 96px 0px 0 0;
   img {
     width: 100%;
     height: 100%;
   }
+}
+.Banner_wrapper {
+  width: 100%;
+  position: relative;
 }
 .Banner_title {
   position: absolute;
@@ -21,7 +25,7 @@
   justify-content: center;
   gap: 48px;
   h1 {
-     width: 567px;
+    width: 567px;
   }
 }
 
@@ -34,4 +38,40 @@
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 600px) {
+  .Banner {
+    width: 100%;
+    h1 {
+      font-size: 18px !important;
+    }
+    button {
+      width: 120px;
+      height: 35px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .Banner {
+    width: 100%;
+    h1 {
+      font-size: 18px !important;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .Banner {
+    width: 100%;
+    h1 {
+      font-size: 10px !important;
+    }
+    button {
+      width: 70px;
+      height: 25px;
+      font-size: 10px;
+    }
+  }
 }

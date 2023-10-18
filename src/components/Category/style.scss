@@ -39,9 +39,7 @@
     font-weight: 800;
     color: black;
   }
-  .swiper-pagination-bullet {
-  
-  }
+
 
   .swiper-pagination-bullets.swiper-pagination-horizontal {
     display: flex;
@@ -49,3 +47,13 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 600px) {
+ 
+ }
+ @media (max-width: 480px) {
+  
+ }
+@media (max-width: 343px) {
+ 
+ }

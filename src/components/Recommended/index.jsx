@@ -30,8 +30,8 @@ export const Recommended = () => {
     return (
         <div className="Recommended">
             <div className="Recommended_title">
-               <h3 className="title">Recommended</h3>
-               <p className="sub_Title">Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.</p>
+                <h3 className="title">Recommended</h3>
+                <p className="sub_Title">Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.</p>
             </div>
             {data?.length > 0 &&
                 <Swiper
@@ -58,6 +58,15 @@ export const Recommended = () => {
 
                 </Swiper>
             }
+            <div className="Recommended_media">
+                <div className="gap">
+                    {
+                        data?.map((v) => (
+                            <HousesCart key={v.id} data={v} />
+                        ))
+                    }
+                </div>
+            </div>
         </div>
     )
 }

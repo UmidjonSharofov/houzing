@@ -5,7 +5,6 @@
   padding: 10px 0;
   img {
     margin-right: 8px;
-
   }
 
   .Input_filter {
@@ -17,8 +16,15 @@
       left: 20px;
     }
   }
+
   .Filter_Button {
     padding-left: 50px;
+  }
+  .Friler_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
   }
 }
 .menuWrapper {
@@ -27,24 +33,69 @@
   padding: 30px;
   border: 1px solid #e6e9ec;
 }
-.menu_Section{
-    width: 100%;
-    display: flex;
-    align-items: center;  
-    margin-bottom: 20px;
-    gap: 20px;
-  
+.menu_Section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
 }
-// style={{width:200,height:45,}} 
-.menu_Select{
-  width:200px;
+// style={{width:200,height:45,}}
+.menu_Select {
+  width: 200px;
   height: 45px;
 }
 
-.menuWrapper{
-
-  :where(.css-dev-only-do-not-override-pr0fja).ant-select-single .ant-select-selector{
+.menuWrapper {
+  :where(.css-dev-only-do-not-override-pr0fja).ant-select-single
+    .ant-select-selector {
     border-radius: 2px !important;
-    
+  }
+}
+@media (max-width: 600px) {
+  .Filter {
+    flex-direction: column;
+    position: relative;
+    top: 80%;
+    width: 80%;
+    padding: 30px 16px;
+    background-color: #fff;
+    padding-bottom: 30px;
+
+    z-index: 999;
+    .Input_filter {
+      width: 100%;
+      input {
+        width: 90%;
+        border: none;
+        border-bottom: 1px solid #e6e9ec;
+      }
+    }
+  }
+  .menuWrapper {
+    width: 200px;
+  }
+}
+@media (max-width: 480px) {
+  .Filter {
+    padding: 20px 12px !important ;
+    width: 80% !important;
+    input {
+      width: 85% !important;
+    }
+    button {
+      width: 120px;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .Filter {
+    width: 84% !important;
+    input {
+      width: 85% !important;
+    }
+    button {
+      width: 120px;
+    }
   }
 }

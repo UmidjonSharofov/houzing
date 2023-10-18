@@ -1,7 +1,14 @@
 import React from 'react'
 import { v4 } from 'uuid'
+import SignInPage from '../pages/Signin'
+import SignUpPage from '../pages/Signup'
+
+// eslint-disable-next-line react-refresh/only-export-components
 const Properties = React.lazy(() => import('../pages/Properties'))
+// eslint-disable-next-line react-refresh/only-export-components
 const Home = React.lazy(() => import('../pages/Home/index'))
+// eslint-disable-next-line react-refresh/only-export-components
+const HouseItme = React.lazy(() => import('../pages/HouseItme/index'))
 
 export const navbar = [
    {
@@ -28,17 +35,28 @@ export const navbar = [
    },
    {
       id: v4(),
-      element: <h1>SIng</h1>,
-      title: "Sing in",
-      path: "/singin",
+      element: <SignUpPage/>,
+      title: "Sing Up",
+      path: "/singup",
       private: false,
       hidden: true
    },
    {
       id: v4(),
-      element: <h1>SIng</h1>,
-      title: "Sing Up",
-      path: "/singup",
+      element: <SignInPage />,
+      title: "Sing in",
+      path: "/signin",
+      private: false,
+      hidden: true
+   },
+   {
+      id: v4(),
+      element:
+         <React.Suspense fallback={<React.Fragment>Loading..</React.Fragment>}>
+            <HouseItme />
+         </React.Suspense>,
+      title: "HouseItme",
+      path: "/properties/:id",
       private: false,
       hidden: true
    },

@@ -1,0 +1,9 @@
+.Recernt_title{
+    text-align: center;
+}
+
+@media (max-width: 600px){
+    .Recernt_title{
+        display: none;
+    }
+}
