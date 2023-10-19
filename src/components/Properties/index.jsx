@@ -11,7 +11,6 @@ const Properties = () => {
   const url = import.meta.env.VITE_SOME_BASE_URL;
   const token=localStorage.getItem('token')
 
-console.log(token);
   useEffect(() => {
     axios.get(`${url}houses/list${search}`).then((res) => {
       setData(res?.data?.data)

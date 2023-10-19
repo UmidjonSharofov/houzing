@@ -11,6 +11,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -18,7 +19,8 @@ import 'swiper/css/navigation';
 export const Recernt = () => {
     const url = import.meta.env.VITE_SOME_BASE_URL
     const [data, setData] = useState([])
-    // const navigate = useNavigate()
+    const token = localStorage.getItem('token')
+    const navigate = useNavigate()
 
     useEffect(() => {
         axios.get(`${url}houses/list`).then((res) => {
@@ -26,12 +28,20 @@ export const Recernt = () => {
         })
     }, [url, data])
     // console.log(data);
+    const onSelect = (id) => {
+        if (token) {
+            navigate(`/properties/:${id}`)
+        }
+        else {
+            navigate('/signin')
+        }
+    }
 
     return (
         <div className="Recommended">
             <div className="Recernt_title">
-               <h3 className="title">Recent Properties for Rent</h3>
-               <p className="sub_Title">Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.</p>
+                <h3 className="title">Recent Properties for Rent</h3>
+                <p className="sub_Title">Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.</p>
             </div>
             {data?.length > 0 &&
                 <Swiper
@@ -50,7 +60,7 @@ export const Recernt = () => {
                     {
                         data?.map((v) => (
                             <SwiperSlide key={v.id}>
-                                <HousesCart data={v} />
+                                <HousesCart onClick={() => onSelect(v.id)} data={v} />
                             </SwiperSlide>
 
                         ))
@@ -58,7 +68,7 @@ export const Recernt = () => {
 
                 </Swiper>
             }
-              <div className="Recommended_media">
+            <div className="Recommended_media">
                 <div className="gap">
                     {
                         data?.map((v) => (

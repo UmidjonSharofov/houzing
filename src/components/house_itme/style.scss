@@ -1,0 +1,21 @@
+.HouseItme_Container{
+    width: 100%;
+    .HouseItme_img{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+      .IMG{
+         max-width: 800px;
+         max-height: 400px;
+      }  
+      .HouseItme_img_grit{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;   
+        img{
+            max-width: 310px;
+        }    
+      }
+    }
+}

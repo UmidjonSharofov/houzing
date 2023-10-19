@@ -67,7 +67,7 @@ const Navbar = () => {
             }
           </div>
           <div className="Section_Navbar">
-            <Button onClick={() => navigate('/singin')} type={'dark'}>Login</Button>
+            <Button onClick={() => navigate('/signin')} type={'dark'}>Login</Button>
           </div>
         </div>
       </div>
