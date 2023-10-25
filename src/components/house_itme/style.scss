@@ -1,21 +1,53 @@
-.HouseItme_Container{
+.HouseItme_Container {
+  width: 100%;
+  .HouseItme_img {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    .HouseItme_img{
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        height: 100%;
-      .IMG{
-         max-width: 800px;
-         max-height: 400px;
-      }  
-      .HouseItme_img_grit{
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 20px;   
-        img{
-            max-width: 310px;
-        }    
+    height: 100%;
+    .IMG {
+      max-width: 800px;
+      max-height: 400px;
+    }
+    .HouseItme_img_grit {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 20px;
+      img {
+        max-width: 310px;
+        padding-bottom: 24px;
       }
     }
+    .HouseItme_title {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .HouseItme_icon {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+  }
+  .HouseItme_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .icon_itme {
+    display: flex;
+    gap: 10px;
+  }
+  .huses_information {
+    display: flex;
+    gap: 20px;
+  }
+  .Description {
+    margin-top: 20px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  }
+  .mt{
+    margin-top: 48px;
+  }
 }

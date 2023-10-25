@@ -13,7 +13,9 @@ import t from '../../assets/images/medi/t.png'
 import i from '../../assets/images/medi/i.png'
 import In from '../../assets/images/medi/in.png'
 
+
 const Navbar = () => {
+
   const navigate = useNavigate()
   const [open, setOpen] = useState(false);
   const [placement] = useState('left');

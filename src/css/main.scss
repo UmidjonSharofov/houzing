@@ -85,17 +85,17 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
 }
-.sing_Title{
+.sing_Title {
   color: $colorPirmary;
   font-family: Montserrat;
-font-size: 18px;
-font-style: normal;
-font-weight: 600;
-line-height: 28px; /* 155.556% */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 155.556% */
 }
 
 @media (max-width: 375px) {
-  .info{
+  .info {
     font-size: 12px !important;
   }
 }
