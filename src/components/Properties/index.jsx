@@ -9,7 +9,6 @@ const Properties = () => {
   const { search } = useLocation()
   const navigate = useNavigate()
   const url = import.meta.env.VITE_SOME_BASE_URL;
-  const token=localStorage.getItem('token')
 
   useEffect(() => {
     axios.get(`${url}houses/list${search}`).then((res) => {
@@ -18,12 +17,7 @@ const Properties = () => {
 
   }, [search])
   const onSelect = (id) => {
-    if(token){
       navigate(`/properties/:${id}`)
-    }
-    else {
-      navigate('/signin')
-    }
   }
   return (
     <div className="Container">

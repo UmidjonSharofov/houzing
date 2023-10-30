@@ -39,7 +39,6 @@ const Container = styled.input`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 120px;
   font-weight: 400;
   border:1px solid #E6E9EC;
   font-size: ${({ FS }) => (FS ? `${FS}px` : "14px")};

@@ -20,7 +20,6 @@ export const Recommended = () => {
     const url = import.meta.env.VITE_SOME_BASE_URL
     const [data, setData] = useState([])
     const navigate = useNavigate()
-    const token=localStorage.getItem('token')
 
     useEffect(() => {
         axios.get(`${url}houses/list`).then((res) => {
@@ -29,13 +28,8 @@ export const Recommended = () => {
     }, [url, data])
     // console.log(data);
     const onSelect = (id) => {
-        if(token){
-          navigate(`/properties/:${id}`)
-        }
-        else {
-          navigate('/signin')
-        }
-      }
+        navigate(`/properties/:${id}`)
+    }
     return (
         <div className="Recommended">
             <div className="Recommended_title">
@@ -59,7 +53,7 @@ export const Recommended = () => {
                     {
                         data?.map((v) => (
                             <SwiperSlide key={v.id}>
-                                <HousesCart onClick={()=>onSelect(v.id)}  data={v} />
+                                <HousesCart onClick={() => onSelect(v.id)} data={v} />
                             </SwiperSlide>
 
                         ))

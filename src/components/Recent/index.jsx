@@ -19,7 +19,6 @@ import { useNavigate } from "react-router-dom";
 export const Recernt = () => {
     const url = import.meta.env.VITE_SOME_BASE_URL
     const [data, setData] = useState([])
-    const token = localStorage.getItem('token')
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -29,12 +28,7 @@ export const Recernt = () => {
     }, [url, data])
     // console.log(data);
     const onSelect = (id) => {
-        if (token) {
-            navigate(`/properties/:${id}`)
-        }
-        else {
-            navigate('/signin')
-        }
+            navigate(`/properties/:${id}`)   
     }
 
     return (
