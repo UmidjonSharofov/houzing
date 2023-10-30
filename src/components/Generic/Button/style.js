@@ -26,6 +26,10 @@ const getType = ({ type }) => {
         border: "none",
         color: "#fff",
       };
+      case "%":
+      return {
+        width:'100%'
+      };
 
     default:
       return {
