@@ -5,7 +5,8 @@ import Button from "../Generic/Button"
 import Filter from "../Filter"
 import Footer from "../Footer"
 import { useState } from "react"
-import { Drawer, } from 'antd';
+import { Drawer, Dropdown } from 'antd';
+
 // Media Img
 import nav from '../../assets/images/medi/nav.png'
 import fe from '../../assets/images/medi/fe.png'
@@ -15,25 +16,39 @@ import In from '../../assets/images/medi/in.png'
 
 
 const Navbar = () => {
-
+  const token = localStorage.getItem('token')
   const navigate = useNavigate()
   const [open, setOpen] = useState(false);
   const [placement] = useState('left');
   const showDrawer = () => {
     setOpen(true);
   };
-  // const onChange = (e) => {
-  //   setPlacement(e.target.value);
-  // };
+
   const onClose = () => {
     setOpen(false);
   };
+  const onClickProfile=({target:{dataset:{name}}})=>{
+    if(name==='logout'){
+       localStorage.removeItem('token')
+       navigate(`/home`)
+    }else{
+       navigate(`/${name}`)
+    }
+  }
+  const menu=(
+    <div className="Menu_Navbar">
+      <p data-name='my_profile' onClick={onClickProfile}>My profile</p>
+      <p data-name='my_properties' onClick={onClickProfile}>My Properties</p>
+      <p data-name='my_favourites' onClick={onClickProfile}>Favourites</p>
+      <p data-name='logout' onClick={onClickProfile}>Log out</p>
+    </div>
+  )
   return (
     <>
       <div className="Container_Navbar">
         <div className="Wrapper">
           <div className="media">
-              <img src={nav} alt="" onClick={showDrawer} />
+            <img src={nav} alt="" onClick={showDrawer} />
             <Drawer
               title=""
               placement={placement}
@@ -68,9 +83,20 @@ const Navbar = () => {
             })
             }
           </div>
-          <div className="Section_Navbar">
-            <Button onClick={() => navigate('/signin')} type={'dark'}>Login</Button>
-          </div>
+          {
+            token ?
+              <Dropdown overlay={menu} placement="bottomRight" trigger={['click']} arrow>
+                <div>
+                  <Button type={'dark'}>Profile</Button>
+                </div>
+
+              </Dropdown>
+
+              : <div className="Section_Navbar">
+                <Button onClick={() => navigate('/signin')} type={'dark'}>Login</Button>
+              </div>
+          }
+
         </div>
       </div>
       <Filter />

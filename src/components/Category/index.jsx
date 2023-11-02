@@ -25,7 +25,7 @@ export const Category = () => {
         axios.get(`${url}categories/list`).then((res) => {
             setData(res?.data?.data)
         })
-    }, [url, data])
+    }, [])
     // console.log(data);
 
     return (

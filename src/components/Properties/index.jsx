@@ -15,7 +15,7 @@ const Properties = () => {
       setData(res?.data?.data)
     });
 
-  }, [search])
+  }, [])
   const onSelect = (id) => {
       navigate(`/properties/:${id}`)
   }
@@ -29,7 +29,7 @@ const Properties = () => {
           </div>
           <div className="Properties">
             {
-              data.map(v => (
+              data?.map(v => (
                 <HoseCart onClick={() => onSelect(v.id)} data={v} key={v.id} />
               ))
             }

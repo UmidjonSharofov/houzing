@@ -58,8 +58,7 @@ export const HouseItme = () => {
       window.scrollTo(0, 0)
     })
 
-  }, [id])
-  console.log(data);
+  }, [])
   return (
     <>
       <div className="Container">

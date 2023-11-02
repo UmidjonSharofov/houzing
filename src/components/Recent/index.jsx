@@ -25,7 +25,7 @@ export const Recernt = () => {
         axios.get(`${url}houses/list`).then((res) => {
             setData(res?.data?.data)
         })
-    }, [url, data])
+    }, [])
     // console.log(data);
     const onSelect = (id) => {
             navigate(`/properties/:${id}`)   
