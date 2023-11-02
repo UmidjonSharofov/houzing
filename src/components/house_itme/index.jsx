@@ -78,7 +78,7 @@ export const HouseItme = () => {
                 <div className='HouseItme_img'>
                   <div className='HouseItme_title'>
                     <h3 className='title'>{data?.name || 'name'}</h3>
-                    <p className='info'>{data?.city} , {data?.address} , {data?.country}</p>
+                    <p className='info'>{data?.city||'city'} , {data?.address||'address'} , {data?.country||'country  '}</p>
                   </div>
                   <div className='HouseItme_icon'>
                     <img src={share} alt="" />
@@ -107,7 +107,7 @@ export const HouseItme = () => {
                     </div>
                     <div className='icon_itme'>
                       <img src={calendar} alt="" />
-                      <p className='info'>Year Built: {data?.houseDetails?.yearBuilt}</p>
+                      <p className='info'>Year Built: {data?.houseDetails?.yearBuilt||0}</p>
                     </div>
                   </div>
                   <div className='huses_information'>
@@ -115,8 +115,8 @@ export const HouseItme = () => {
                       <del>${data?.salePrice || 0}/ mo</del>
                     </div>
                     <div>
-                      <p className='title'>${data?.price}/mo</p>
-                      <p className='info'>{data?.user?.firstname}</p>
+                      <p className='title'>${data?.price||0}/mo</p>
+                      <p className='info'>{data?.user?.firstname||0}</p>
                     </div>
                   </div>
                 </div>
@@ -218,7 +218,7 @@ export const HouseItme = () => {
                 <Input placeholder='Phone' />
                 <Input placeholder='Email' />
                 <Input placeholder='Message' />
-                <Checkbox>By submitting this form I agree to Terms of Use</Checkbox>
+                {/* <Checkbox>By submitting this form I agree to Terms of Use</Checkbox> */}
                 <Button type='%'>Send request</Button>
               </div>
             </div>
