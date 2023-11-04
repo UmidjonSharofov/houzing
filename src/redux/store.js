@@ -1,19 +1,17 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage'; // localStorage
-
-
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage"; // localStorage
+import { RefetchReducer } from "./features/refetch";
 
 const persistConfig = {
-  key: 'root',
+  key: "root",
   storage,
 };
 const rootReducer = combineReducers({
-    // add another reducers bro!!!
-  
-  
-  })
-  
+  // add another reducers bro!!!
+  RefetchReducer,
+});
+
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({

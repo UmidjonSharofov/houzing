@@ -39,7 +39,7 @@ const Navbar = () => {
     <div className="Menu_Navbar">
       <p data-name='my_profile' onClick={onClickProfile}>My profile</p>
       <p data-name='my_properties' onClick={onClickProfile}>My Properties</p>
-      <p data-name='my_favourites' onClick={onClickProfile}>Favourites</p>
+      <p data-name='favourites' onClick={onClickProfile}>Favourites</p>
       <p data-name='logout' onClick={onClickProfile}>Log out</p>
     </div>
   )

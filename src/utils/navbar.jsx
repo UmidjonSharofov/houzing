@@ -9,12 +9,14 @@ const Properties = React.lazy(() => import('../pages/Properties'))
 const Home = React.lazy(() => import('../pages/Home/index'))
 // eslint-disable-next-line react-refresh/only-export-components
 const HouseItme = React.lazy(() => import('../pages/HouseItme/index'))
+// eslint-disable-next-line react-refresh/only-export-components
+const Favourite = React.lazy(() => import('../pages/Favourite/index'))
 
 export const navbar = [
    {
       id: v4(),
       element:
-         <React.Suspense fallback={<React.Fragment><h1>Loadin...</h1></React.Fragment>}>
+         <React.Suspense fallback={<React.Fragment><h1>Loadin..</h1></React.Fragment>}>
             <Home />
          </React.Suspense>,
       title: "Home",
@@ -58,6 +60,17 @@ export const navbar = [
       title: "HouseItme",
       path: "/properties/:id",
       private: false,
+      hidden: true
+   },
+   {
+      id: v4(),
+      element:
+         <React.Suspense fallback={<React.Fragment>Loading..</React.Fragment>}>
+            <Favourite />
+         </React.Suspense>,
+      title: "Favourite",
+      path: "/favourites",
+      private: true,
       hidden: true
    },
 ]

@@ -4,12 +4,17 @@ import { store, persistor } from './redux/store.js'
 import { PersistGate } from 'redux-persist/integration/react';
 import Root from './root/indx.jsx';
 import './index.css'
-ReactDOM.createRoot(document.getElementById('root')).render(
+import { QueryClient, QueryClientProvider,  } from 'react-query';
 
-  <Provider store={store}>
-    <PersistGate loading={false} persistor={persistor}>
-      <Root/>
-    </PersistGate>
-  </Provider >
+
+const  queryClient =new QueryClient()
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <QueryClientProvider client={queryClient} >
+    <Provider store={store}>
+      <PersistGate loading={false} persistor={persistor}>
+        <Root />
+      </PersistGate>
+    </Provider >
+  </QueryClientProvider >
 
 )

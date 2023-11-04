@@ -218,7 +218,7 @@ export const HouseItme = () => {
                 <Input placeholder='Phone' />
                 <Input placeholder='Email' />
                 <Input placeholder='Message' />
-                {/* <Checkbox>By submitting this form I agree to Terms of Use</Checkbox> */}
+                <Checkbox>By submitting this form I agree to Terms of Use</Checkbox>
                 <Button type='%'>Send request</Button>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import {  useState } from "react"
 import { Button, Input } from "../Generic"
 import axios from "axios"
 import { Link, useNavigate } from "react-router-dom"
@@ -17,9 +17,7 @@ export const SignIn = () => {
   const Email = (e) => {
     setEmail(e.target.value)
   }
-  useEffect(() => {
-
-  })
+  
   const Login = () => {
     if(!email.includes('@gmail.com')||password.length<4){
       const notify = () => toast('Invalid email or password');
